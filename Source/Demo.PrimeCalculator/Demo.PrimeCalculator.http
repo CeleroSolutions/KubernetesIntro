@@ -1,0 +1,6 @@
+@Demo.PrimeCalculator_HostAddress = http://localhost:5279
+
+GET {{Demo.PrimeCalculator_HostAddress}}/findPrime/
+Accept: application/json
+
+###
