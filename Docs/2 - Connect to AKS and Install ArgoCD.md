@@ -11,10 +11,10 @@ Assuming you have the Azure CLI installed, run the following commands to connect
 az login
 
 # Set the AKS cluster context
-az aks get-credentials --resource-group <your-resource-group> --name <your-aks-cluster-name>
+az aks get-credentials --resource-group *your-resource-group* --name *your-aks-cluster-name*
 ```
 
-Replace *<your-resource-group>* and *<your-aks-cluster-name>* with your actual resource group and AKS cluster name.
+Replace *your-resource-group* and *your-aks-cluster-name* with your actual resource group and AKS cluster name.
 
 Run the following command:
 
@@ -49,7 +49,7 @@ kubectl get svc argocd-server -n argocd -o jsonpath="{.status.loadBalancer.ingre
 
 ## Step 3: Connect to ArgoCD
 
-Login to ArgoCD using this URL https://<argocd-server-ip> inserting the correct IP address from step 2. Login using the username *admin* and decoded password from step 2.
+Login to ArgoCD using this URL https://*argocd-server-ip* inserting the correct IP address from step 2. Login using the username *admin* and decoded password from step 2.
 
 
 ![ArgoCD Homepage](Resources/ArgoCdHomepage.png)
