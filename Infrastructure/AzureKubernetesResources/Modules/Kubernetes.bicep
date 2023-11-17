@@ -48,7 +48,7 @@ param ResourceIdDataCollectionRule string
 
 var resourceNameAks = 'AKS-KubernetesDemo-${Environment}-01'
 
-var resourceGroupNameAksNode = 'RG-KubernetesDemo-${Environment}'
+var resourceGroupNameAksNode = 'RG-KubernetesNode-${Environment}'
 
 var resourceNameDcr = 'MSCI-${Location}-${resourceNameAks}'
 
