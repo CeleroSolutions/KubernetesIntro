@@ -18,3 +18,10 @@ spec:
         image: celerosolutions/kubernetesloadgeneratordemo:latest
         ports:
         - containerPort: 8080
+        resources:
+          requests:
+            cpu: 200m
+            memory: 100Mi
+          limits:
+            cpu: 500m
+            memory: 200Mi
