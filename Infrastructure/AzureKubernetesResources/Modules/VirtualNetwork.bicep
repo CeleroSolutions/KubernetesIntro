@@ -107,7 +107,21 @@ resource resourceNsgSystemNode 'Microsoft.Network/networkSecurityGroups@2020-11-
   location: Location
   tags: Tags
   properties: {
-    securityRules: []
+    securityRules: [
+      {
+        name: 'AllowAllInbound'
+        properties: {
+          priority: 100
+          direction: 'Inbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: 'Internet'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+    ]
   }
 }
 
@@ -116,7 +130,21 @@ resource resourceNsgSystemPod 'Microsoft.Network/networkSecurityGroups@2020-11-0
   location: Location
   tags: Tags
   properties: {
-    securityRules: []
+    securityRules: [
+      {
+        name: 'AllowAllInbound'
+        properties: {
+          priority: 100
+          direction: 'Inbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: 'Internet'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+    ]
   }
 }
 
@@ -125,7 +153,21 @@ resource resourceNsgDemoNode 'Microsoft.Network/networkSecurityGroups@2020-11-01
   location: Location
   tags: Tags
   properties: {
-    securityRules: []
+    securityRules: [
+      {
+        name: 'AllowAllInbound'
+        properties: {
+          priority: 100
+          direction: 'Inbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: 'Internet'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+    ]
   }
 }
 
@@ -134,7 +176,21 @@ resource resourceNsgDemoPod 'Microsoft.Network/networkSecurityGroups@2020-11-01'
   location: Location
   tags: Tags
   properties: {
-    securityRules: []
+    securityRules: [
+      {
+        name: 'AllowAllInbound'
+        properties: {
+          priority: 100
+          direction: 'Inbound'
+          access: 'Allow'
+          protocol: '*'
+          sourceAddressPrefix: 'Internet'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+    ]
   }
 }
 

@@ -22,6 +22,14 @@ Fill in the following sections and click *Create*. Leave all other sections blan
 ![ArgoCD Create Application General Settings](Resources/ArgoCdCreateApplicationGeneralSettings.png)
 
 
+**Source Settings:**
+
+- Repository URL:     https://github.com/CeleroSolutions/KubernetesIntro.git
+- Path:               Infrastructure/KubernetesServices/LoadGenerator
+
+![ArgoCD Create Application Source Settings](Resources/ArgoCdCreateApplicationSourceSettings.png)
+
+
 **Destination Settings:**
 
 - Cluster URL:        https://kubernetes.default.svc
@@ -30,12 +38,13 @@ Fill in the following sections and click *Create*. Leave all other sections blan
 ![ArgoCD Create Application Destination Settings](Resources/ArgoCdCreateApplicationDestinationSettings.png)
 
 
-**Source Settings:**
-
-- Repository URL:     https://github.com/CeleroSolutions/KubernetesDemos.git
-- Path:               Infrastructure/KubernetesServices/LoadGenerator
-
-![ArgoCD Create Application Source Settings](Resources/ArgoCdCreateApplicationSourceSettings.png)
-
 You should see the application created on the ArgoCD home page:
 
+![ArgoCD Create Application Progressing](Resources/ArgoCdCreateApplicationProgressing.png)
+
+
+ Click on the application and you should see resources being created and eventually change to healthy:
+
+ ![ArgoCD Application Progressing](Resources/ArgoCdApplicationProgressing.png)
+
+  ![ArgoCD Application Success](Resources/ArgoCdApplicationSuccess.png)

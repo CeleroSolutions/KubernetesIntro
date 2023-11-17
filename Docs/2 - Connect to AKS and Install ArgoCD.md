@@ -24,6 +24,8 @@ kubectl get namespace
 
 You may get prompted to browse to https://microsoft.com/devicelogin and enter a code. Proceed with these directions, and ensure the command completes without an error.
 
+Please note that in a production environment, AKS management would be limited to a private network.
+
 ## Step 2: Install ArgoCD
 
 Once connected to the AKS cluster, install ArgoCD using the following commands:
@@ -51,3 +53,6 @@ Login to ArgoCD using this URL https://<argocd-server-ip> inserting the correct 
 
 
 ![ArgoCD Homepage](Resources/ArgoCdHomepage.png)
+
+
+Please note that in a production environment, ArgoCD management would be limited to a private network.
