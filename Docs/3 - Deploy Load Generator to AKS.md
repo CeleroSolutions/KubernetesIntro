@@ -13,27 +13,27 @@ Fill in the following sections and click *Create*. Leave all other sections blan
 
 **General Settings:**
 
-Application Name:   load-generator
-Project Name:       default
-Sync Policy:        Automatic
-Prune Resources:    Checked
-Self Heal:          Checked
+- Application Name:   load-generator
+- Project Name:       default
+- Sync Policy:        Automatic
+- Prune Resources:    Checked
+- Self Heal:          Checked
 
 ![ArgoCD Create Application General Settings](Resources/ArgoCdCreateApplicationGeneralSettings.png)
 
 
 **Destination Settings:**
 
-Cluster URL:        https://kubernetes.default.svc
-Namespace:          argocd
+- Cluster URL:        https://kubernetes.default.svc
+- Namespace:          argocd
 
 ![ArgoCD Create Application Destination Settings](Resources/ArgoCdCreateApplicationDestinationSettings.png)
 
 
 **Source Settings:**
 
-Repository URL:     https://github.com/CeleroSolutions/KubernetesDemos.git
-Path:               Infrastructure/KubernetesServices/LoadGenerator
+- Repository URL:     https://github.com/CeleroSolutions/KubernetesDemos.git
+- Path:               Infrastructure/KubernetesServices/LoadGenerator
 
 ![ArgoCD Create Application Source Settings](Resources/ArgoCdCreateApplicationSourceSettings.png)
 
