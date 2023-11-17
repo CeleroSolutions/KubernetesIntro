@@ -1,15 +1,20 @@
-### Step 1: Install Azure CLI
+# Connecting to AKS Cluster and Installing ArgoCD
+
+Follow these steps to deploy AKS and associated resources in Azure. Youl will require owner permissions to proceed with these steps. You will also require your Azure [tenant ID](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id#find-your-microsoft-entra-tenant) and a [group](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups#create-a-basic-group-and-add-members) in Azure AD.
+
+
+## Step 1: Install Azure CLI
 Make sure you have the Azure CLI installed. You can download it from the [official Azure CLI website](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
 
 
-### Step 2: Compile Bicep to ARM
+## Step 2: Compile Bicep to ARM
 Navigate to [the directory where the Bicep file is located](../Infrastructure/Azure%20Kubernetes%20Resources) and run the following command to compile it to ARM:
 
 ```bash
 az bicep build --file base.bicep --outdir ./
 ```
 
-### Step 3: Deploy to Azure
+## Step 3: Deploy to Azure
 
 Now, you can deploy the compiled ARM template to Azure using the following command:
 
@@ -17,7 +22,7 @@ Now, you can deploy the compiled ARM template to Azure using the following comma
 az deployment group create --resource-group your-resource-group-name --template-file ./output/compiled-template.json --parameters TenantId="your-tenant-id" AdminGroupObjectId="your-admin-group-object-id"
 ```
 
-Replace *your-resource-group-name* with the desired name for your Azure Resource Group, *your-tenant-id* and *your-admin-group-object-id* with your Azure AD Tenant ID and Admin Group Object ID (this admin group can be any group in your tenant; permissions will be assigned to the group to manage Kubernetes.). Additionally, adjust other parameter values as needed from the *base.bicep* file.
+Replace *your-resource-group-name* with the desired name for your Azure Resource Group, *your-tenant-id* and *your-admin-group-object-id* with your Azure AD Tenant ID and Admin Group Object ID (this admin group can be any group in your tenant; permissions will be assigned to the group to manage Kubernetes). Additionally, adjust other parameter values as needed from the *base.bicep* file.
 
 Make sure to replace the example values with your actual information.
 
