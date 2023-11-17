@@ -4,7 +4,6 @@ metadata:
   name: load-generator
   namespace: load-generator
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: load-generator
