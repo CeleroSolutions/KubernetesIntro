@@ -8,7 +8,7 @@ Make sure you have the Azure CLI installed. You can download it from the [offici
 
 
 ## Step 2: Compile Bicep to ARM
-Navigate to [the directory where the Bicep file is located](../Infrastructure/Azure%20Kubernetes%20Resources) and run the following command to compile it to ARM:
+Navigate to [the directory where the Bicep file is located](../Infrastructure/AzureKubernetesResources) and run the following command to compile it to ARM:
 
 ```bash
 az bicep build --file base.bicep --outdir ./
