@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: LoadGenerator
+  namespace: LoadGenerator
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: LoadGenerator
+  template:
+    metadata:
+      labels:
+        app: LoadGenerator
+    spec:
+      containers:
+      - name: LoadGenerator
+        image: celerosolutions/kubernetesloadgeneratordemo:latest
+        ports:
+        - containerPort: 8080
